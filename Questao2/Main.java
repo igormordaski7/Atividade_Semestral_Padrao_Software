@@ -8,14 +8,18 @@ public class Main {
 
         // Agressivo
         calc.setModelo(new ModeloAgressivo());
-        System.out.println("Risco Agressivo: " + calc.executarCalculo(5000, 20000, 25));
+        System.out.println("Risco Agressivo: R$ " + calc.executarCalculo(5000, 20000, 25));
 
         // Moderado
         calc.setModelo(new ModeloModerado());
-        System.out.println("Risco Moderado: " + calc.executarCalculo(5000, 20000, 25));
+        System.out.println("Risco Moderado: R$ " + calc.executarCalculo(5000, 20000, 25));
 
         // Conservador
         calc.setModelo(new ModeloConservador());
-        System.out.println("Risco Conservador: " + calc.executarCalculo(5000, 20000, 25));
+        System.out.println("Risco Conservador: R$ " + calc.executarCalculo(5000, 20000, 25));
+
+        // NOVO MODELO - SEM ALTERAR CÓDIGO EXISTENTE
+        calc.setModelo(new ModeloPersonalizado());
+        System.out.println("Risco Personalizado: R$ " + calc.executarCalculo(5000, 20000, 25));
     }
 }
